@@ -1,35 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>demod.space</title>
 </head>
 <body>
-
-<h2>How To Create A Loader</h2>
-
-<div class="loader"></div>
-
+    
 </body>
+</html>
+<body>
+
+    <nav class="navbar">
+      <div class="navLogo">
+        <a href="index.html"><img src="img/demod_space.png"></a>
+      </div>
+    </nav>
+  
+    <div class="container">
+  
+      <div class="mainBox">
+        <h1>
+          <div class="typewrite" data-period="1500" data-type='[ "demod.space", "Currently this website is not finished yet...", "Soon will be finished and published.", "Just wait!" ]'>
+            <span class="wrap"></span>
+          </div>
+        </h1>
+
+        <div class="moreinfo">
+            <button class="moreinfoBtn" onclick="showMenu()">Click for more info.</button>
+            <div class="menuReveal">
+                <p><a href="https://discord.gg/cocorp">Click to join CoCoRP discord. I am car/map/clothes developer here.</a></p>
+                <p><a href="https://discord.gg/exilerp">Click to join ExileRP discord. I am lead car developer here.</a></p>
+            </div>
+        </div>
+                
+        <style>
+            .menuReveal {
+                opacity: 0;
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: transform 0.5s ease, opacity 0.5s ease;
+                background-color: #222;
+                border-radius: 25px;
+                border: 2px solid #666;
+                margin-top: 50px;
+            }
+                
+            .menuReveal.show {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        </style>
+                
+        <script>
+            function showMenu() {
+                var menu = document.querySelector(".menuReveal");
+                if (menu.classList.contains("show")) {
+                    menu.classList.remove("show");
+                } else {
+                    menu.classList.add("show");
+                }
+            }
+        </script>
+        
+
+        <div class="pacman">
+          <p><a href="game/index.html">Click to play Pac-Man.</a></p>
+        </div>
+      </div>
+  
+    </div>
+  
+  </body>
+  
 </html>
