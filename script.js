@@ -21,7 +21,7 @@ TxtType.prototype.tick = function() {
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
     var that = this;
-    var delta = 200 - Math.random() * 100;
+    var delta = 100 - Math.random() * 50; // prędkość pisania (mniej = szybciej / więcej = wolniej)
 
     if (this.isDeleting) { delta /= 2; }
 
@@ -54,3 +54,4 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
