@@ -4,6 +4,8 @@ body {
     background: #171717;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 * {
@@ -82,6 +84,29 @@ p:hover {
 }
 
 .pacman a:hover {
+    text-decoration: solid;
+}
+
+.beta {
+    display: flex;
+    bottom: 0;
+    opacity: 1;
+    width: 90%;
+    transform: translateX(6%) translateY(300%);
+    color: #333;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.beta a {
+    color: #202020a4;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.beta a:hover {
     text-decoration: solid;
 }
 
